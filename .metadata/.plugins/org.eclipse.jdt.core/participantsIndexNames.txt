@@ -1,0 +1,7 @@
+INDEX VERSION 1.134
+C:\Users\Walter\Documents\BartoBotinas\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3948385872.index
+\BananaBacana\src\main\java
+C:\Users\Walter\Documents\BartoBotinas\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3307383544.index
+\BartoBotinas\src\main\java
+C:\Users\Walter\Documents\BartoBotinas\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1786579607.index
+\BartoBotinas\src\main\java

@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/estilo.css">
+
+<meta charset="ISO-8859-1">
+<title>Bartô Botinas</title>
+</head>
+<body>
+	<nav class="bartoNav">
+		<ul>
+			<li><a href="">Cliente</a></li>
+			<li><a href="cadastrarFornecedor.jsp">Fornecedor</a></li>
+			<li><a href="">Pedido Cliente</a></li>
+			<li><a href="">Pedido Fornecedor</a></li>
+			<li><a href="">Produtos</a></li>
+		</ul>
+	</nav>
+	<main class="bartoMain">
+		<form action="" method="post" class="bartoForm">
+			<div>
+				<label><strong>Descrição:</strong></label><input type="text"
+					name="descricao">
+			</div>
+			<div>
+				<label><strong>Quantidade:</strong></label><input type="text"
+					name="quantidade">
+			</div>
+			<div>
+				<label><strong>Preço:</strong></label><input type="text"
+					name="preco">
+			</div>
+
+			<label><strong>Disponível On-Line:</strong></label><input
+				type="checkbox" name="online">
+			<br>
+			<div>
+				<input id="bartoButton" type="submit" name="salvar"
+					value="Cadastrar Produto">
+			</div>
+		</form>
+	</main>
+</body>
+</html>

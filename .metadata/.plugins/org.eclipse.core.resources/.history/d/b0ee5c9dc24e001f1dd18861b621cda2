@@ -1,0 +1,231 @@
+@charset "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	background-color: #f0f0f0;
+}
+
+.bartoNav {
+	width: 100%;
+	background-color: #ff8000;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+.bartoNav ul {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	justify-content: center;
+	padding: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+.bartoNav a {
+	color: white;
+	transition: color 0.3s ease;
+}
+
+.bartoNav a:hover {
+	color: #ffe0b3;
+}
+
+.bartoMain {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #e0e0e0;
+	width: 100%;
+	height: 100vh;
+	padding: 20px;
+	margin-top: 80px; /* Ajustado para contabilizar a altura da barra de navegação fixa */
+}
+
+.bartoForm {
+	display: flex;
+	flex-direction: column;
+	padding: 45px;
+	width: 100%;
+	max-width: 800px; /* Aumentado para melhor layout */
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bartoForm input {
+	border-radius: 8px;
+	border: 1px solid gray;
+	width: 100%;
+	padding: 10px;
+	background-color: #f0f0f0;
+	transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.bartoForm input:focus {
+	background-color: #fff;
+	border-color: #ff8000;
+	outline: none;
+}
+
+.bartoForm div {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.bartoForm label {
+	margin-bottom: 5px;
+	font-weight: 600;
+}
+
+.endereco {
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid #ccc;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.endereco > div {
+	flex: 1 1 calc(50% - 20px); /* Assegura que os campos ocupem metade da largura disponível */
+}
+
+#bartoButton {
+	background-color: #ff8000;
+	border: none;
+	color: white;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+#bartoButton:hover {
+	background-color: #cc6600;
+}
+
+/* Estilizações para a página da empresa */
+.empresaInfo {
+	background-color: white;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 600px;
+}
+
+.empresaInfo h1 {
+	margin-bottom: 20px;
+	font-size: 24px;
+	color: #333;
+}
+
+.empresaInfo p {
+	margin-bottom: 10px;
+	font-size: 18px;
+	color: #666;
+}
+
+.empresaInfo p strong {
+	color: #333;
+}
+
+/* Estilizações para o cadastro de itens do pedido do cliente */
+.itensPedidoForm {
+	background-color: white;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 600px;
+}
+
+.itensPedidoForm h1 {
+	margin-bottom: 20px;
+	font-size: 24px;
+	color: #333;
+}
+
+.itensPedidoForm div {
+	margin-bottom: 20px;
+}
+
+/* Estilizações para o cadastro de itens do pedido do fornecedor */
+.fornecedorForm {
+	background-color: white;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 600px;
+}
+
+.fornecedorForm h1 {
+	margin-bottom: 20px;
+	font-size: 24px;
+	color: #333;
+}
+
+.fornecedorForm div {
+	margin-bottom: 20px;
+}
+
+/* Estilizações para o cadastro de produtos */
+.produtoForm {
+	background-color: white;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 600px;
+}
+
+.produtoForm h1 {
+	margin-bottom: 20px;
+	font-size: 24px;
+	color: #333;
+}
+
+.produtoForm div {
+	margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+	.bartoNav ul {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.bartoForm, .itensPedidoForm, .fornecedorForm, .produtoForm {
+		padding: 30px;
+		width: 100%;
+	}
+
+	.bartoForm input, .itensPedidoForm input, .fornecedorForm input, .produtoForm input {
+		width: 100%;
+	}
+
+	.endereco {
+		flex-direction: column;
+	}
+
+	.endereco > div {
+		width: 100%;
+	}
+}

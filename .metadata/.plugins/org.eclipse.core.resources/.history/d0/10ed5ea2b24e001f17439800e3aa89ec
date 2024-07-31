@@ -1,0 +1,53 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/estilo.css">
+<meta charset="UTF-8">
+<title>Itens do Pedido do Fornecedor</title>
+</head>
+<body>
+	<nav class="bartoNav">
+		<ul>
+			<li><a href="index.jsp">Home</a></li>
+			<li><a href="cadastrarCliente.jsp">Cliente</a></li>
+			<li><a href="cadastrarFornecedor.jsp">Fornecedor</a></li>
+			<li><a href="cadastrarPedidoCliente.jsp">Pedido Cliente</a></li>
+			<li><a href="cadastrarPedidoFornecedor.jsp">Pedido Fornecedor</a></li>
+			<li><a href="produtos.jsp">Produtos</a></li>
+		</ul>
+	</nav>
+	<main class="bartoMain">
+		<div class="itensPedidoForm">
+			<h1>Cadastrar Item do Pedido do Fornecedor</h1>
+			<form action="ItemPedidoFornecedorServlet" method="post">
+				<div>
+					<label for="pedido"><strong>Pedido Fornecedor:</strong></label>
+					<select id="pedido" name="idPedidoFornecedor" required>
+						<option value="">Selecione um pedido</option>
+						<c:forEach var="pedido" items="${pedidos}">
+							<option value="${pedido[0]}">${pedido[1]}</option>
+						</c:forEach>
+					</select>
+				</div>
+				<div>
+					<label for="produto"><strong>Produto:</strong></label>
+					<select id="produto" name="idProduto" required>
+						<option value="">Selecione um produto</option>
+						<c:forEach var="produto" items="${produtos}">
+							<option value="${produto[0]}">${produto[1]}</option>
+						</c:forEach>
+					</select>
+				</div>
+				<div>
+					<label for="quantidade"><strong>Quantidade:</strong></label>
+					<input type="number" id="quantidade" name="quantidade" required>
+				</div>
+				<div>
+					<input id="bartoButton" type="submit" value="Cadastrar Item">
+				</div>
+			</form>
+		</div>
+	</main>
+</body>
+</html>
