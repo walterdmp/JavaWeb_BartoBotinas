@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>BartoBotinas</display-name>
+  
+  <servlet>
+  	<servlet-name>cadastrarFornecedor</servlet-name>
+  	<servlet-class>barto.controller.cadastrarFornecedorController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>cadastrarFornecedor</servlet-name>
+  	<url-pattern>/cadastrarFornecedor</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>cadastrarCaixa</servlet-name>
+  	<servlet-class>barto.controller.cadastrarCaixaController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>cadastrarCaixa</servlet-name>
+  	<url-pattern>/cadastrarCaixa</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>cadastrarCliente</servlet-name>
+  	<servlet-class>barto.controller.cadastrarClienteController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>cadastrarCliente</servlet-name>
+  	<url-pattern>/cadastrarCliente</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>cadastrarEmpresa</servlet-name>
+  	<servlet-class>barto.controller.cadastrarEmpresaController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>cadastrarEmpresa</servlet-name>
+  	<url-pattern>/cadastrarEmpresa</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>cadastrarPedidoCliente</servlet-name>
+  	<servlet-class>barto.controller.cadastrarPedidoClienteController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>cadastrarPedidoCliente</servlet-name>
+  	<url-pattern>/cadastrarPedidoCliente</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>cadastrarPedidoFornecedor</servlet-name>
+  	<servlet-class>barto.controller.cadastrarPedidoFornecedorController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>cadastrarPedidoFornecedor</servlet-name>
+  	<url-pattern>/cadastrarPedidoFornecedor</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

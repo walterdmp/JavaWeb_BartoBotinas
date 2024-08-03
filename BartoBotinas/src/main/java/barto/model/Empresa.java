@@ -1,5 +1,8 @@
 package barto.model;
 
+import barto.dao.CaixaDao;
+import barto.dao.EmpresaDao;
+
 public class Empresa {
 	private int idEmpresa;
 	private String nome;
@@ -12,7 +15,6 @@ public class Empresa {
 	}
 	
 	public Empresa(int idEmpresa, String nome, String cnpj, String telefone, String email) {
-		super();
 		this.idEmpresa = idEmpresa;
 		this.nome = nome;
 		this.cnpj = cnpj;
@@ -77,5 +79,8 @@ public class Empresa {
 		this.email = email;
 	}
 	
+	public void salvar() {
+		new EmpresaDao().cadastrarEmpresa(this);
+	}
 	
 }

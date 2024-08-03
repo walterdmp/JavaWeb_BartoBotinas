@@ -1,0 +1,93 @@
+package barto.controller;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/cadastrarFornecedorController")
+public class cadastrarFornecedorController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public cadastrarFornecedorController() {
+		super();
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		this.doPost(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+
+		String nome = request.getParameter("nome");
+		String cnpj = request.getParameter("cnpj");
+		String telefone = request.getParameter("telefone");
+		String email = request.getParameter("email");
+		String logradouro = request.getParameter("logradouro");
+		String numero = request.getParameter("numero");
+		String cidade = request.getParameter("cidade");
+		String estado = request.getParameter("estado");
+
+		// Inicializar uma StringBuilder para armazenar mensagens de erro
+		StringBuilder errorMessage = new StringBuilder();
+
+		// Validações simples
+		if (nome == null || nome.isEmpty()) {
+			errorMessage.append("Nome é obrigatório.<br>");
+		}
+		if (cnpj == null || cnpj.length() != 14) {
+			errorMessage.append("CNPJ deve ter 14 dígitos.<br>");
+		}
+		if (telefone == null || telefone.length() < 10 || telefone.length() > 11) {
+			errorMessage.append("Telefone deve ter 10 ou 11 dígitos.<br>");
+		}
+		if (email == null || email.isEmpty()) {
+			errorMessage.append("Email é obrigatório.<br>");
+		}
+		if (logradouro == null || logradouro.isEmpty()) {
+			errorMessage.append("Logradouro é obrigatório.<br>");
+		}
+		if (numero == null || numero.isEmpty()) {
+			errorMessage.append("Número é obrigatório.<br>");
+		}
+		if (cidade == null || cidade.isEmpty()) {
+			errorMessage.append("Cidade é obrigatória.<br>");
+		}
+		if (estado == null || estado.isEmpty()) {
+			errorMessage.append("Estado é obrigatório.<br>");
+		}
+
+		// Verificar se há erros
+		if (errorMessage.length() > 0) {
+			// Há erros, envie a resposta com as mensagens de erro
+			request.setAttribute("errorMessage", errorMessage.toString());
+			request.getRequestDispatcher("cadastroFornecedor.jsp").forward(request, response);
+		} else {
+			// Nenhum erro, prossiga com o processamento normal (por exemplo, salvar no
+			// banco de dados)
+			System.out.println(nome + cnpj + telefone + email + logradouro + numero + cidade + estado);
+
+			// Redirecionar para uma página de sucesso ou fazer outra ação
+			response.sendRedirect("sucesso.jsp");
+		}
+
+	}
+
+}

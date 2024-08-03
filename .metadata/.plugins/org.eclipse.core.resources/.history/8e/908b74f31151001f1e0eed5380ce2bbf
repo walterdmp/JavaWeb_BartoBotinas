@@ -1,0 +1,29 @@
+package barto.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import barto.model.Endereco;
+import barto.model.Fornecedor;
+
+public class FornecedorDao {
+	public void cadastrarProduto(Fornecedor fornecedor, Endereco endereco) {
+		String sql = "INSERT INTO PRODUTO VALUES (null,?,?,?,?,?)";
+		PreparedStatement pStatement = null;
+		Connection conn= null;
+		
+		try {
+			conn = new MySqlConnection().getConnection();
+			pStatement = conn.prepareStatement(sql);
+			pStatement.setString(1, fornecedor.getNome());
+			pStatement.setString(2, fornecedor.getCnpj());
+			pStatement.setString(3, fornecedor.getTelefone());
+			pStatement.setString(4, fornecedor.getEmail());
+			pStatement.setObject(5, endereco.getIdEndereco());
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

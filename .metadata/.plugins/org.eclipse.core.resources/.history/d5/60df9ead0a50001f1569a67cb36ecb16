@@ -1,0 +1,5 @@
+package barto.model;
+
+public class PedidoFornecedor {
+
+}

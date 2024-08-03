@@ -11,12 +11,13 @@
 	<nav class="bartoNav">
 		<ul>
 			<li><a href="home.jsp">Home</a></li>
+			<li><a href="cadastrarCaixa.jsp">Caixa</a></li>
 			<li><a href="cadastrarCliente.jsp">Cliente</a></li>
 			<li><a href="cadastrarFornecedor.jsp">Fornecedor</a></li>
+			<li><a href="cadastrarFuncionario.jsp">Funcionário</a></li>
 			<li><a href="cadastrarPedidoCliente.jsp">Pedido Cliente</a></li>
-			<li><a href="cadastrarPedidoFornecedor.jsp">Pedido
-					Fornecedor</a></li>
-			<li><a href="cadastrarProdutos.jsp">Produtos</a></li>
+			<li><a href="cadastrarPedidoFornecedor.jsp">Pedido Fornecedor</a></li>
+			<li><a href="cadastrarProduto.jsp">Produtos</a></li>
 		</ul>
 	</nav>
 	<main class="bartoMain">

@@ -1,0 +1,150 @@
+@charset "ISO-8859-1";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap')
+	;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	background-color: #f0f0f0;
+}
+
+/* Estilos de Navegação */
+.bartoNav {
+	width: 100%;
+	background-color: #ff8000;
+}
+
+.bartoNav ul {
+	display: flex;
+	flex-direction: row;
+	gap: 20px; /* Diminuiu o espaço entre itens */
+	justify-content: center;
+	padding: 15px; /* Diminuiu o padding */
+	color: white;
+	font-weight: bold;
+}
+
+.bartoNav a {
+	color: white;
+	transition: color 0.3s ease;
+}
+
+.bartoNav a:hover {
+	color: #ffe0b3;
+}
+
+/* Estilos Principais */
+.bartoMain {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #e0e0e0;
+	width: 100%;
+	height: auto; /* Ajuste para a altura do conteúdo */
+	padding: 15px; /* Diminuiu o padding */
+}
+
+.empresaInfo, .bartoForm, .itensPedidoForm, .fornecedorForm,
+	.produtoForm {
+	display: flex;
+	flex-direction: column;
+	padding: 20px; /* Diminuiu o padding */
+	width: 100%;
+	max-width: 500px; /* Ajustado para tamanho menor */
+	background-color: white;
+	border-radius: 8px; /* Diminuiu o border-radius */
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Diminuiu o box-shadow */
+}
+
+.bartoForm input, .itensPedidoForm input, .fornecedorForm input,
+	.produtoForm input, .empresaInfo input {
+	border-radius: 4px; /* Diminuiu o border-radius */
+	border: 1px solid gray;
+	width: 100%;
+	padding: 6px; /* Diminuiu o padding */
+	background-color: #f0f0f0;
+	font-size: 14px; /* Diminuiu o tamanho da fonte */
+	transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.bartoForm input:focus, .itensPedidoForm input:focus, .fornecedorForm input:focus,
+	.produtoForm input:focus {
+	background-color: #fff;
+	border-color: #ff8000;
+	outline: none;
+}
+
+.bartoForm div, .itensPedidoForm div, .fornecedorForm div, .produtoForm div
+	{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 10px; /* Diminuiu o margin-bottom */
+}
+
+.bartoForm label, .itensPedidoForm label, .fornecedorForm label,
+	.produtoForm label {
+	margin-bottom: 4px; /* Diminuiu o margin-bottom */
+	font-weight: 600;
+	font-size: 14px; /* Diminuiu o tamanho da fonte */
+}
+
+#bartoButton {
+	background-color: #ff8000;
+	border: none;
+	color: white;
+	font-weight: bold;
+	padding: 6px 12px; /* Diminuiu o padding */
+	border-radius: 4px; /* Diminuiu o border-radius */
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	font-size: 14px; /* Diminuiu o tamanho da fonte */
+}
+
+#bartoButton:hover {
+	background-color: #cc6600;
+}
+
+/* Estilos para a Página da Empresa */
+.empresaInfo h1, .itensPedidoForm h1, .fornecedorForm h1, .produtoForm h1
+	{
+	margin-bottom: 10px; /* Diminuiu o margin-bottom */
+	font-size: 20px; /* Diminuiu o tamanho da fonte */
+	color: #333;
+}
+
+.empresaInfo p {
+	margin-bottom: 6px; /* Diminuiu o margin-bottom */
+	font-size: 14px; /* Diminuiu o tamanho da fonte */
+	color: #666;
+}
+
+.empresaInfo p strong {
+	color: #333;
+}
+
+/* Estilos de Mídia Responsiva */
+@media ( max-width : 600px) {
+	.bartoNav ul {
+		flex-direction: column;
+		gap: 8px; /* Diminuiu o espaço entre itens */
+	}
+	.bartoForm, .empresaInfo, .itensPedidoForm, .fornecedorForm,
+		.produtoForm {
+		padding: 15px; /* Diminuiu o padding */
+		width: 100%;
+	}
+	.bartoForm input, .itensPedidoForm input, .fornecedorForm input,
+		.produtoForm input {
+		width: 100%;
+	}
+}

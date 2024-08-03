@@ -11,12 +11,14 @@
 	<nav class="bartoNav">
 		<ul>
 			<li><a href="home.jsp">Home</a></li>
+			<li><a href="cadastrarCaixa.jsp">Caixa</a></li>
 			<li><a href="cadastrarCliente.jsp">Cliente</a></li>
 			<li><a href="cadastrarFornecedor.jsp">Fornecedor</a></li>
+			<li><a href="cadastrarFuncionario.jsp">Funcionário</a></li>
 			<li><a href="cadastrarPedidoCliente.jsp">Pedido Cliente</a></li>
 			<li><a href="cadastrarPedidoFornecedor.jsp">Pedido
 					Fornecedor</a></li>
-			<li><a href="cadastrarProdutos.jsp">Produtos</a></li>
+			<li><a href="cadastrarProduto.jsp">Produtos</a></li>
 		</ul>
 	</nav>
 	<main class="bartoMain">
@@ -27,17 +29,44 @@
 			</div>
 			<div>
 				<label for="cpf"><strong>CPF:</strong></label> <input type="text"
-					id="cpf" name="cpf" placeholder="CPF do cliente" required>
+					id="cpf" name="cpf" placeholder="CPF do cliente" pattern="\d{11}"
+					title="Digite um CPF válido (11 dígitos)" required>
 			</div>
 			<div>
 				<label for="telefone"><strong>Telefone:</strong></label> <input
 					type="text" id="telefone" name="telefone"
-					placeholder="Telefone do cliente" required>
+					placeholder="Telefone do cliente" pattern="\d+"
+					title="Digite apenas números" required>
 			</div>
+
 			<div>
 				<label for="email"><strong>E-mail:</strong></label> <input
 					type="email" id="email" name="email" placeholder="Email do cliente"
 					required>
+			</div>
+			<br>
+			<hr>
+			<br>
+			<div>
+				<label for="logradouro"><strong>Logradouro:</strong></label> <input
+					type="text" id="logradouro" name="logradouro"
+					placeholder="Logradouro" required>
+			</div>
+			<div>
+				<label for="numero"><strong>Número:</strong></label> <input
+					type="text" id="numero" name="numero" placeholder="Número" required>
+			</div>
+			<div>
+				<label for="bairro"><strong>Bairro:</strong></label> <input
+					type="text" id="bairro" name="bairro" placeholder="Bairro" required>
+			</div>
+			<div>
+				<label for="cidade"><strong>Cidade:</strong></label> <input
+					type="text" id="cidade" name="cidade" placeholder="Cidade" required>
+			</div>
+			<div>
+				<label for="estado"><strong>Estado:</strong></label> <input
+					type="text" id="estado" name="estado" placeholder="Estado" required>
 			</div>
 			<br>
 			<div>

@@ -11,12 +11,14 @@
 	<nav class="bartoNav">
 		<ul>
 			<li><a href="home.jsp">Home</a></li>
+			<li><a href="cadastrarCaixa.jsp">Caixa</a></li>
 			<li><a href="cadastrarCliente.jsp">Cliente</a></li>
 			<li><a href="cadastrarFornecedor.jsp">Fornecedor</a></li>
+			<li><a href="cadastrarFuncionario.jsp">Funcionário</a></li>
 			<li><a href="cadastrarPedidoCliente.jsp">Pedido Cliente</a></li>
 			<li><a href="cadastrarPedidoFornecedor.jsp">Pedido
 					Fornecedor</a></li>
-			<li><a href="cadastrarProdutos.jsp">Produtos</a></li>
+			<li><a href="cadastrarProduto.jsp">Produtos</a></li>
 		</ul>
 	</nav>
 	<main class="bartoMain">
@@ -33,12 +35,22 @@
 			</div>
 			<div>
 				<label for="data"><strong>Data:</strong></label> <input type="date"
-					id="data" name="data" required>
+					id="data" name="dataPedido" required>
 			</div>
 			<div>
-				<label for="total"><strong>Total:</strong></label> <input
-					type="number" step="0.01" id="total" name="total" required>
+				<label for="produto"><strong>Produto:</strong></label> <select
+					id="produto" name="idProduto" required>
+					<option value="">Selecione um produto</option>
+					<c:forEach var="produto" items="${produtos}">
+						<option value="${produto[0]}">${produto[1]}</option>
+					</c:forEach>
+				</select>
 			</div>
+			<div>
+				<label for="quantidade"><strong>Quantidade:</strong></label> <input
+					type="number" id="quantidade" name="quantidade" required>
+			</div>
+
 			<br>
 			<div>
 				<input id="bartoButton" type="submit" name="salvar"

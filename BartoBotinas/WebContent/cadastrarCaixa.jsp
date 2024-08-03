@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/estilo.css">
+<meta charset="UTF-8">
+<title>Bartô Botinas - Caixa</title>
+</head>
+<body>
+	<nav class="bartoNav">
+		<ul>
+			<li><a href="home.jsp">Home</a></li>
+			<li><a href="cadastrarCaixa.jsp">Caixa</a></li>
+			<li><a href="cadastrarCliente.jsp">Cliente</a></li>
+			<li><a href="cadastrarFornecedor.jsp">Fornecedor</a></li>
+			<li><a href="cadastrarFuncionario.jsp">Funcionário</a></li>
+			<li><a href="cadastrarPedidoCliente.jsp">Pedido Cliente</a></li>
+			<li><a href="cadastrarPedidoFornecedor.jsp">Pedido
+					Fornecedor</a></li>
+			<li><a href="cadastrarProduto.jsp">Produtos</a></li>
+		</ul>
+	</nav>
+	<main class="bartoMain">
+		<form action="cadastrarCaixa" method="post" class="bartoForm">
+			<div>
+				<label for="tipo"><strong>Tipo:</strong></label> <select id="tipo"
+					name="tipo" required>
+					<option value="">Selecione um tipo</option>
+					<option value="Entrada">Entrada</option>
+					<option value="Saida">Saída</option>
+				</select>
+			</div>
+			<div>
+				<label for="valor"><strong>Valor:</strong></label> <input
+					type="number" step="0.01" id="valor" name="valor" required min="0"
+					placeholder="Insira o valor">
+			</div>
+			<div>
+				<label for="descricao"><strong>Descrição:</strong></label> <input
+					type="text" id="descricao" name="descricao">
+			</div>
+			<div>
+				<label for="data"><strong>Data:</strong></label> <input type="date"
+					id="data" name="data" required>
+			</div>
+			<br>
+			<div>
+				<input id="bartoButton" type="submit" name="salvar"
+					value="Registrar Caixa">
+			</div>
+		</form>
+	</main>
+</body>
+</html>

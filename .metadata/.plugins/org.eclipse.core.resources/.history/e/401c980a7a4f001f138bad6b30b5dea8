@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/estilo.css">
+<meta charset="UTF-8">
+<title>Bartô Botinas - Pedido Fornecedor</title>
+</head>
+<body>
+	<nav class="bartoNav">
+		<ul>
+			<li><a href="home.jsp">Home</a></li>
+			<li><a href="cadastrarCaixa.jsp">Caixa</a></li>
+			<li><a href="cadastrarCliente.jsp">Cliente</a></li>
+			<li><a href="cadastrarFornecedor.jsp">Fornecedor</a></li>
+			<li><a href="cadastrarFuncionario.jsp">Funcionário</a></li>
+			<li><a href="cadastrarPedidoCliente.jsp">Pedido Cliente</a></li>
+			<li><a href="cadastrarPedidoFornecedor.jsp">Pedido Fornecedor</a></li>
+			<li><a href="cadastrarProdutos.jsp">Produtos</a></li>
+		</ul>
+	</nav>
+	<main class="bartoMain">
+		<form action="cadastrarPedidoFornecedor" method="post" class="bartoForm">
+			<div>
+				<label for="idFornecedor"><strong>ID do Fornecedor:</strong></label>
+				<input type="text" id="idFornecedor" name="idFornecedor" placeholder="ID do fornecedor" required>
+			</div>
+			<div>
+				<label for="idProduto"><strong>ID do Produto:</strong></label>
+				<input type="text" id="idProduto" name="idProduto" placeholder="ID do produto" required>
+			</div>
+			<div>
+				<label for="quantidade"><strong>Quantidade:</strong></label>
+				<input type="number" id="quantidade" name="quantidade" placeholder="Quantidade do produto" required>
+			</div>
+			<br>
+			<div>
+				<input id="bartoButton" type="submit" name="salvar" value="Registrar Pedido">
+			</div>
+		</form>
+	</main>
+</body>
+</html>

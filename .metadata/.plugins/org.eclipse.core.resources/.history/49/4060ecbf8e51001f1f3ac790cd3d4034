@@ -1,0 +1,88 @@
+package barto.controller;
+
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import barto.model.Caixa;
+
+/**
+ * Servlet implementation class cadastrarCaixaController
+ */
+@WebServlet("/cadastrarCaixaController")
+public class cadastrarCaixaController extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public cadastrarCaixaController() {
+        super();
+    }
+
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+     *      response)
+     */
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        this.doPost(request, response);
+    }
+
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+     *      response)
+     */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
+
+        String tipo = request.getParameter("tipo");
+        String valorStr = request.getParameter("valor");
+        String descricao = request.getParameter("descricao");
+        String dataStr = request.getParameter("data");
+
+        double valor = 0;
+        Date data = null;
+
+        try {
+            valor = Double.parseDouble(valorStr);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            String mensagem = "Erro ao converter o valor. Por favor, insira um número válido.";
+            request.setAttribute("mensagem", mensagem);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("cadastrarCaixa.jsp");
+            dispatcher.forward(request, response);
+            return;
+        }
+
+        try {
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            data = dateFormat.parse(dataStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            String mensagem = "Erro ao converter a data. Por favor, insira uma data válida.";
+            request.setAttribute("mensagem", mensagem);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("cadastrarCaixa.jsp");
+            dispatcher.forward(request, response);
+            return;
+        }
+
+        Caixa caixa = new Caixa(tipo, valor, descricao, data);
+        caixa.salvar();
+
+        String mensagem = "Movimentação de Caixa cadastrada com sucesso!";
+        request.setAttribute("mensagem", mensagem);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("cadastrarCaixa.jsp");
+        dispatcher.forward(request, response);
+    }
+}

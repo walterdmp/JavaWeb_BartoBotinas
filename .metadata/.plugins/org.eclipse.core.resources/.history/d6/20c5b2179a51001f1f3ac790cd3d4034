@@ -1,0 +1,5 @@
+package barto.dao;
+
+public class ClienteDao {
+
+}

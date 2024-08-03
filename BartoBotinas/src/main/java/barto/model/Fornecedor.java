@@ -1,24 +1,28 @@
 package barto.model;
 
+import barto.dao.FornecedorDao;
+
 public class Fornecedor {
 	private int idFornecedor;
 	private String nome;
+	private String cnpj;
 	private String telefone;
 	private String email;
 	
-	Fornecedor(){
-		
+	public Fornecedor(){
 	}
 
-	public Fornecedor(int idFornecedor, String nome, String telefone, String email) {
+	public Fornecedor(int idFornecedor, String nome, String cnpj, String telefone, String email) {
 		this.idFornecedor = idFornecedor;
 		this.nome = nome;
+		this.cnpj = cnpj;
 		this.telefone = telefone;
 		this.email = email;
 	}
 
-	public Fornecedor(String nome, String telefone, String email) {
+	public Fornecedor(String nome, String cnpj, String telefone, String email) {
 		this.nome = nome;
+		this.cnpj = cnpj;
 		this.telefone = telefone;
 		this.email = email;
 	}
@@ -39,6 +43,14 @@ public class Fornecedor {
 		this.nome = nome;
 	}
 
+	public String getCnpj() {
+		return cnpj;
+	}
+
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+
 	public String getTelefone() {
 		return telefone;
 	}
@@ -54,6 +66,8 @@ public class Fornecedor {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
+
+	public void salvar() {
+		new FornecedorDao().cadastrarFornecedor(this);
+	}
 }

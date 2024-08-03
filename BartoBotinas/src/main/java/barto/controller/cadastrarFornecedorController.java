@@ -1,46 +1,58 @@
 package barto.controller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import barto.model.Endereco;
+import barto.model.Fornecedor;
 
 @WebServlet("/cadastrarFornecedorController")
 public class cadastrarFornecedorController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public cadastrarFornecedorController() {
-        super();
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		System.out.println("Recebi a requisiçãopp");
+	public cadastrarFornecedorController() {
+		super();
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		this.doPost(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
-		
+
 		String nome = request.getParameter("nome");
 		String cnpj = request.getParameter("cnpj");
 		String telefone = request.getParameter("telefone");
 		String email = request.getParameter("email");
 		
-		System.out.println(nome + cnpj + telefone + email);
-		
+		Fornecedor fornecedor = new Fornecedor(nome, cnpj, telefone, email);
+		fornecedor.salvar();
+
+		String mensagem = "Fornecedor cadastrado com sucesso!";
+		request.setAttribute("mensagem", mensagem);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("cadastrarFornecedor.jsp");
+		dispatcher.forward(request, response);;
 	}
 
 }

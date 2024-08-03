@@ -1,0 +1,82 @@
+package barto.model;
+
+import java.time.LocalDate;
+
+public class PedidoCliente {
+	private int idPedidoCliente;
+	private Cliente cliente;
+	private LocalDate dataPedido;
+	private Produto produto;
+	private int quantidade;
+	private double total;
+
+	public PedidoCliente(int idPedidoCliente, Cliente cliente, LocalDate dataPedido, Produto produto, int quantidade,
+			double total) {
+		this.idPedidoCliente = idPedidoCliente;
+		this.cliente = cliente;
+		this.dataPedido = dataPedido;
+		this.produto = produto;
+		this.quantidade = quantidade;
+		this.total = total;
+	}
+
+	public PedidoCliente(Cliente cliente, LocalDate dataPedido, Produto produto, int quantidade, double total) {
+		this.cliente = cliente;
+		this.dataPedido = dataPedido;
+		this.produto = produto;
+		this.quantidade = quantidade;
+		this.total = total;
+	}
+
+	public PedidoCliente() {
+	}
+
+	public int getIdPedidoCliente() {
+		return idPedidoCliente;
+	}
+
+	public void setIdPedidoCliente(int idPedidoCliente) {
+		this.idPedidoCliente = idPedidoCliente;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public LocalDate getDataPedido() {
+		return dataPedido;
+	}
+
+	public void setDataPedido(LocalDate dataPedido) {
+		this.dataPedido = dataPedido;
+	}
+
+	public Produto getProduto() {
+		return produto;
+	}
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+
+	public double getTotal() {
+		return total;
+	}
+
+	public void setTotal(double total) {
+		this.total = total;
+	}
+
+}

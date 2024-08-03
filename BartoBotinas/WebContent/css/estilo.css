@@ -1,8 +1,6 @@
 @charset "ISO-8859-1";
 
-@import
-	url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap')
-	;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 * {
 	margin: 0;
@@ -26,9 +24,9 @@ body {
 .bartoNav ul {
 	display: flex;
 	flex-direction: row;
-	gap: 15px; /* Diminuiu o espaço entre itens */
+	gap: 20px; /* Ajustado para reduzir o espaço entre itens */
 	justify-content: center;
-	padding: 15px; /* Diminuiu o padding */
+	padding: 10px; /* Ajustado para reduzir o padding */
 	color: white;
 	font-weight: bold;
 }
@@ -50,52 +48,47 @@ body {
 	background-color: #e0e0e0;
 	width: 100%;
 	height: auto; /* Ajuste para a altura do conteúdo */
-	padding: 15px; /* Diminuiu o padding */
+	padding: 20px; /* Ajustado para aumentar o padding */
 }
 
-.empresaInfo, .bartoForm, .itensPedidoForm, .fornecedorForm,
-	.produtoForm {
+.empresaInfo, .bartoForm, .itensPedidoForm, .fornecedorForm, .produtoForm {
 	display: flex;
 	flex-direction: column;
-	padding: 20px; /* Diminuiu o padding */
+	padding: 15px; /* Ajustado para reduzir o padding */
 	width: 100%;
 	max-width: 500px; /* Ajustado para tamanho menor */
 	background-color: white;
-	border-radius: 8px; /* Diminuiu o border-radius */
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Diminuiu o box-shadow */
+	border-radius: 6px; /* Ajustado para border-radius menor */
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Ajustado para box-shadow menor */
 }
 
-.bartoForm input, .itensPedidoForm input, .fornecedorForm input,
-	.produtoForm input, .empresaInfo input {
-	border-radius: 4px; /* Diminuiu o border-radius */
+.bartoForm input, .itensPedidoForm input, .fornecedorForm input, .produtoForm input, .empresaInfo input {
+	border-radius: 4px;
 	border: 1px solid gray;
 	width: 100%;
-	padding: 6px; /* Diminuiu o padding */
+	padding: 8px; /* Ajustado para aumentar o padding */
 	background-color: #f0f0f0;
-	font-size: 14px; /* Diminuiu o tamanho da fonte */
+	font-size: 15px; /* Ajustado para tamanho de fonte ligeiramente maior */
 	transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.bartoForm input:focus, .itensPedidoForm input:focus, .fornecedorForm input:focus,
-	.produtoForm input:focus {
+.bartoForm input:focus, .itensPedidoForm input:focus, .fornecedorForm input:focus, .produtoForm input:focus {
 	background-color: #fff;
 	border-color: #ff8000;
 	outline: none;
 }
 
-.bartoForm div, .itensPedidoForm div, .fornecedorForm div, .produtoForm div
-	{
+.bartoForm div, .itensPedidoForm div, .fornecedorForm div, .produtoForm div {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	margin-bottom: 10px; /* Diminuiu o margin-bottom */
+	margin-bottom: 12px; /* Ajustado para aumentar o margin-bottom */
 }
 
-.bartoForm label, .itensPedidoForm label, .fornecedorForm label,
-	.produtoForm label {
-	margin-bottom: 4px; /* Diminuiu o margin-bottom */
+.bartoForm label, .itensPedidoForm label, .fornecedorForm label, .produtoForm label {
+	margin-bottom: 6px; /* Ajustado para aumentar o margin-bottom */
 	font-weight: 600;
-	font-size: 14px; /* Diminuiu o tamanho da fonte */
+	font-size: 15px; /* Ajustado para tamanho de fonte ligeiramente maior */
 }
 
 #bartoButton {
@@ -103,11 +96,11 @@ body {
 	border: none;
 	color: white;
 	font-weight: bold;
-	padding: 6px 12px; /* Diminuiu o padding */
-	border-radius: 4px; /* Diminuiu o border-radius */
+	padding: 8px 16px; /* Ajustado para aumentar o padding */
+	border-radius: 4px;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
-	font-size: 14px; /* Diminuiu o tamanho da fonte */
+	font-size: 15px; /* Ajustado para tamanho de fonte ligeiramente maior */
 }
 
 #bartoButton:hover {
@@ -115,16 +108,15 @@ body {
 }
 
 /* Estilos para a Página da Empresa */
-.empresaInfo h1, .itensPedidoForm h1, .fornecedorForm h1, .produtoForm h1
-	{
-	margin-bottom: 10px; /* Diminuiu o margin-bottom */
-	font-size: 20px; /* Diminuiu o tamanho da fonte */
+.empresaInfo h1, .itensPedidoForm h1, .fornecedorForm h1, .produtoForm h1 {
+	margin-bottom: 12px; /* Ajustado para aumentar o margin-bottom */
+	font-size: 22px; /* Ajustado para tamanho de fonte maior */
 	color: #333;
 }
 
 .empresaInfo p {
-	margin-bottom: 6px; /* Diminuiu o margin-bottom */
-	font-size: 14px; /* Diminuiu o tamanho da fonte */
+	margin-bottom: 8px; /* Ajustado para aumentar o margin-bottom */
+	font-size: 15px; /* Ajustado para tamanho de fonte ligeiramente maior */
 	color: #666;
 }
 
@@ -133,18 +125,16 @@ body {
 }
 
 /* Estilos de Mídia Responsiva */
-@media ( max-width : 600px) {
+@media (max-width: 600px) {
 	.bartoNav ul {
 		flex-direction: column;
-		gap: 8px; /* Diminuiu o espaço entre itens */
+		gap: 10px; /* Ajustado para reduzir o espaço entre itens */
 	}
-	.bartoForm, .empresaInfo, .itensPedidoForm, .fornecedorForm,
-		.produtoForm {
-		padding: 15px; /* Diminuiu o padding */
+	.bartoForm, .empresaInfo, .itensPedidoForm, .fornecedorForm, .produtoForm {
+		padding: 20px; /* Ajustado para aumentar o padding */
 		width: 100%;
 	}
-	.bartoForm input, .itensPedidoForm input, .fornecedorForm input,
-		.produtoForm input {
+	.bartoForm input, .itensPedidoForm input, .fornecedorForm input, .produtoForm input {
 		width: 100%;
 	}
 }

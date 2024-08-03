@@ -1,2 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="barto.model.Produto"/>
+    <fullyQualifiedTypeName name="barto.model.Endereco"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="barto.dao.MySqlConnection"/>
+    <fullyQualifiedTypeName name="barto.model.Fornecedor"/>
+    <fullyQualifiedTypeName name="barto.dao.FornecedorDao"/>
+    <fullyQualifiedTypeName name="barto.model.Caixa"/>
+    <fullyQualifiedTypeName name="barto.dao.CaixaDao"/>
+    <fullyQualifiedTypeName name="barto.dao.FuncionarioDao"/>
+    <fullyQualifiedTypeName name="barto.dao.ClienteDao"/>
+    <fullyQualifiedTypeName name="barto.dao.EmpresaDao"/>
+    <fullyQualifiedTypeName name="barto.dao.PedidoClienteDao"/>
+    <fullyQualifiedTypeName name="barto.dao.PedidoFornecedorDao"/>
+    <fullyQualifiedTypeName name="barto.dao.ProdutoDao"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeParseException"/>
+</qualifiedTypeNameHistroy>

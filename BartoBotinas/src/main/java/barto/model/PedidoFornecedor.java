@@ -1,0 +1,63 @@
+package barto.model;
+
+import java.time.LocalDate;
+
+import barto.dao.PedidoFornecedorDao;
+
+public class PedidoFornecedor {
+	private int idPedidoFornecedor;
+	private Fornecedor fornecedor;
+	private LocalDate dataPedido;
+	private Produto produto;
+	private int quantidade;
+	public PedidoFornecedor(int idPedidoFornecedor, Fornecedor fornecedor, LocalDate dataPedido, Produto produto,
+			int quantidade) {
+		this.idPedidoFornecedor = idPedidoFornecedor;
+		this.fornecedor = fornecedor;
+		this.dataPedido = dataPedido;
+		this.produto = produto;
+		this.quantidade = quantidade;
+	}
+	public PedidoFornecedor(Fornecedor fornecedor, LocalDate dataPedido, Produto produto, int quantidade) {
+		this.fornecedor = fornecedor;
+		this.dataPedido = dataPedido;
+		this.produto = produto;
+		this.quantidade = quantidade;
+	}
+	public PedidoFornecedor() {
+	}
+	public int getIdPedidoFornecedor() {
+		return idPedidoFornecedor;
+	}
+	public void setIdPedidoFornecedor(int idPedidoFornecedor) {
+		this.idPedidoFornecedor = idPedidoFornecedor;
+	}
+	public Fornecedor getFornecedor() {
+		return fornecedor;
+	}
+	public void setFornecedor(Fornecedor fornecedor) {
+		this.fornecedor = fornecedor;
+	}
+	public LocalDate getDataPedido() {
+		return dataPedido;
+	}
+	public void setDataPedido(LocalDate dataPedido) {
+		this.dataPedido = dataPedido;
+	}
+	public Produto getProduto() {
+		return produto;
+	}
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
+	public int getQuantidade() {
+		return quantidade;
+	}
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+	
+	public void salvar() {
+		new PedidoFornecedorDao().cadastrarPedidoFornecedor(this);
+	}
+}

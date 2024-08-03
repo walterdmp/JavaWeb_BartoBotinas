@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/estilo.css">
+<meta charset="UTF-8">
+<title>Bartô Botinas - Funcionário</title>
+</head>
+<body>
+	<nav class="bartoNav">
+		<ul>
+			<li><a href="home.jsp">Home</a></li>
+			<li><a href="cadastrarCliente.jsp">Cliente</a></li>
+			<li><a href="cadastrarFornecedor.jsp">Fornecedor</a></li>
+			<li><a href="cadastrarPedidoCliente.jsp">Pedido Cliente</a></li>
+			<li><a href="cadastrarPedidoFornecedor.jsp">Pedido
+					Fornecedor</a></li>
+			<li><a href="cadastrarProdutos.jsp">Produtos</a></li>
+			<li><a href="cadastrarCaixa.jsp">Caixa</a></li>
+			<li><a href="cadastrarFuncionario.jsp">Funcionário</a></li>
+		</ul>
+	</nav>
+	<main class="bartoMain">
+		<form action="cadastrarFuncionario" method="post" class="bartoForm">
+			<div>
+				<label for="nome"><strong>Nome:</strong></label> <input type="text"
+					id="nome" name="nome" required>
+			</div>
+			<div>
+				<label for="telefone"><strong>Telefone:</strong></label> <input
+					type="text" id="telefone" name="telefone" required>
+			</div>
+			<div>
+				<label for="cargo"><strong>Cargo:</strong></label> <input
+					type="text" id="cargo" name="cargo" required>
+			</div>
+			<div>
+				<label for="salario"><strong>Salário:</strong></label> <input
+					type="number" step="0.01" id="salario" name="salario" required>
+			</div>
+			<br>
+			<div>
+				<input id="bartoButton" type="submit" name="salvar"
+					value="Cadastrar Funcionário">
+			</div>
+		</form>
+	</main>
+</body>
+</html>
