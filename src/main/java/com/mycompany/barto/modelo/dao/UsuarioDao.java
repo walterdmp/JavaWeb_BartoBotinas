@@ -13,17 +13,17 @@ public class UsuarioDao extends GenericoDao<Usuario> {
     }
 
     public void alterar(Usuario u) {
-        String update = "UPDATE USUARIO SET USUARIO=?, SENHA=? WHERE ID_USUARIO=?";
+        String update = "UPDATE USUARIO SET USUARIO=?, SENHA=? WHERE IDUSUARIO=?";
         save(update, u.getUsuario(), u.getSenha(), u.getIdUsuario());
     }
 
     public void excluir(Usuario u) {
-        String delete = "DELETE FROM USUARIO WHERE ID_USUARIO=?";
+        String delete = "DELETE FROM USUARIO WHERE IDUSUARIO=?";
         save(delete, u.getIdUsuario());
     }
 
     public Usuario buscarPorId(int id) {
-        String select = "SELECT * FROM USUARIO WHERE ID_USUARIO=?";
+        String select = "SELECT * FROM USUARIO WHERE IDUSUARIO=?";
         return buscarPorId(select, new UsuarioRowMapper(), id);
     }
 
@@ -42,7 +42,7 @@ public class UsuarioDao extends GenericoDao<Usuario> {
         @Override
         public Usuario mapRow(ResultSet rs) throws SQLException {
             Usuario usuario = new Usuario();
-            usuario.setIdUsuario(rs.getInt("ID_USUARIO"));
+            usuario.setIdUsuario(rs.getInt("IDUSUARIO"));
             usuario.setUsuario(rs.getString("USUARIO"));
             usuario.setSenha(rs.getString("SENHA"));
             return usuario;
